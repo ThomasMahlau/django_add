@@ -1,0 +1,13 @@
+<a href="{% url 'entry' %}">Home</a>
+<a href="{% url 'mitarbeiter_list' %}">Mitarbeiterliste</a>
+<a href="{% url 'mitarbeiter_list_filter' %}">Mitarbeiterliste (Filter)</a>
+<a href="{% url 'klienten_list' %}">Klientenliste</a>
+<a href="{% url 'loginSeite' %}" class="btn btn-primary">Login</a>
+<a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
+<a href="{% url 'register' %}" class="btn btn-primary">Registrieren</a>
+Aktueller User: 
+{% if request.user.is_authenticated %}
+    {{request.user|title}}
+{%else%}
+    UNBEKANNT
+{% endif %}

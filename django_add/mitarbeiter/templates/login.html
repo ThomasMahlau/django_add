@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <h1>Login</h1>
+    <div>
+	<form method="POST" action="">
+		{% csrf_token %}
+		<div class="mb-3">
+			<label for="benutzername" class="form-label">Benutzername</label>
+			<input
+				type="text"
+				class="form-control"
+				id="benutzername"
+				name="benutzername"
+			/>
+		</div>
+		<div class="mb-3">
+			<label for="passwort" class="form-label">Passwort</label>
+			<input
+				type="password"
+				class="form-control"
+				id="passwort"
+				name="passwort"
+			/>
+		</div>
+		<button type="submit" class="btn btn-primary">Login</button>
+		<hr />
+		<p>
+		</p>
+	</form>
+</div>
+{% endblock content %}
+

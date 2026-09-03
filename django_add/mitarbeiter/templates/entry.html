@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+    <h1>Eröffnungsseite</h1>
+    <div class="row row-cols-4 me-5">
+    {% for app in apps %}
+        <div class="card me-3" style="width: 18rem;">
+            <a href="{{app.nav_image.url}}"><img src="/static{{app.nav_image.url}}" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+                <h5 class="card-title">{{app.nav_punkt}}</h5>
+                <p class="card-text">{{app.nav_text}}</p>
+                <a href="{{app.nav_link}}" class="btn btn-primary">Weiter</a>
+            </div>
+        </div>
+  
+    {% endfor %}
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,23 @@
+# Dateitypen ignorieren
+*.log
+
+# Spezielle Dateien tracken
+!special.log
+
+# ganze Verzeichnisse ignorieren
+build/
+
+# ignoriere nur Datei im aktuellen Verzeichnis
+/fileignoriere.txt
+
+# ignoriere alle txt-Dateien im Ordner ...
+build/*.txt
+
+# spezifische (Config-) Dateien ignorieren
+config/settings.py
+
+# ignoriere Dateien im aktuellen UND den darauf abgeleiteten Unterordnern
+dokumente/**/*.pdf
+
+# ignoriere Dateien mit gleichem Namen aber unterschiedlichen Zusatzkennungen (z.B. Zahlen(bereich)
+text[1-3].txt
